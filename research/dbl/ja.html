@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Detailed Balance Learning@Shin-ichi MAEDA's Homepage</title>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="index" href="./index.html" />
+<link rel="shortcut icon" href="../../images/favicon.ico" />
+<link href="../../css/import.css" rel="stylesheet" type="text/css" media="screen, tv, projection" />
+</head>
+<body>
+<div id="container">
+	<div id="header">
+		<div class="outer">
+			<div class="inner">
+				<div class="left_box">
+					<div class="logo">
+						<a href="../../index.html"><img src="../../images/logo.jpg" width="200" height="50" alt="logo" id="logo" name="logo" /></a>
+					</div>
+				</div>
+				<div class="right_box">
+					<div class="menu_box">
+						<ul class="menu">
+							<li><a href="../../index.html">TOP</a></li>
+							<li><a href="../../biography/index.html">BIOGRAPHY</a></li>
+							<li><a href="../../research/index.html">RESEARCH</a></li>
+							<li><a href="../../publication/index.html">PUBLICATION</a></li>
+							<li><a href="../../link/index.html">LINK</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="contents">
+		<div class="outer">
+			<div class="inner">
+				<div class="left_side_column"></div>
+				<div class="contents_column">
+					<div class="contents_box">
+						<h1>Detailed Balance Learning</h1>
+						<h2>なぜContrastive Divergence Learningだとうまくいく ?</h2>
+						<div class="box">
+							<div class="left_image">
+								<img src="images/hinton.jpg" width="458" height="384" alt="image" id="image" name="image" />
+							</div>
+							<p>
+								Hintonら(2006)は高次元パラメータをもつ階層ボルツマンマシンを大規模データを用いて学習させることに成功した。
+								この学習アルゴリズムに<span class="style1">Contrastive Divergence Learning</span>が用いられており、Hintonらはこれが重要なファクターであることを示唆したが、このContrastive Divergence Learningの理論背景は明確ではなかった。
+							</p>
+						</div>
+						<h2>Detailed Balance Learning(DBL) </h2>
+						<div class="box">
+							<p>
+								既約なマルコフ連鎖は，唯一の定常分布をもつ。
+								しかし、<span class="style1">マルコフ連鎖の訪れる状態数が大きいとき、その定常分布を陽に求めることは困難</span>であり、定常分布がサンプルを生成する真の分布に近づくようにマルコフ連鎖のパラメータを学習させることは難しい。
+							</p>
+							<p>
+								本研究では、このようなマルコフ連鎖の定常分布を真の分布に近づけるための新しい学習法として<span class="style2">Detailed Balance Learning (DBL)</span> を提案する。
+							</p>
+							<p>
+								ボルツマンマシンなどの離散分布においては、しばしば、同時分布を定義した時の正規化定数をパラメータの関数として陽に表現することが困難になる。
+								このようなモデルにおいて条件付き分布は、例えば、各離散変数が二値であれば二項分布であるように容易に求めることができる。
+								ここで提案するDBLは、このような<span class="style1">条件付き分布を用いたギプスサンプリングによるマルコフ連鎖にも適用できる</span>ため、ボルツマンマシンなどの正規化定数の計算が困難な離散変数の分布の学習に適用できる。
+							</p>
+							<p>
+								また、この学習法はContrastive Divergence Learning (CDL)と密接な関係をもつ。
+							</p>
+						</div>
+						<h2>計算機実験</h2>
+						<div class="box">
+							<h3>モデル分布が真の分布を表現可能な場合</h3>
+							<div class="center_image">
+								<img src="images/possible.jpg" width="630" height="250" alt="image" id="image" name="image" />
+							</div>
+							<ul>
+								<li>
+									真の分布：RBM  (観測変数4次元, 隠れ変数3次元) (パラメータは乱数で決定)
+								</li>
+								<li>
+									モデル分布：RBM (観測変数4次元, 隠れ変数3次元) (初期パラメータは乱数で決定)
+								</li>
+								<li>
+									サンプル数：1000点
+								</li>
+								<li>
+									学習則：DBL (ステップ2の実行には準ニュートン法を用いた)
+								</li>
+							</ul>
+							<h3>モデル分布が真の分布を表現不可能な場合</h3>
+							<div class="center_image">
+								<img src="images/impossible.jpg" width="622" height="250" alt="image" id="image" name="image" />
+							</div>
+							<ul>
+								<li>
+									真の分布：RBM  (観測変数4次元, <span class="style2">隠れ変数5次元</span>) (パラメータは乱数で決定)
+								</li>
+								<li>
+									モデル分布：RBM (観測変数4次元, 隠れ変数3次元) (初期パラメータは乱数で決定)
+								</li>
+								<li>
+									サンプル数：1000点
+								</li>
+								<li>
+									学習則：DBL (ステップ2の実行には準ニュートン法を用いた)
+								</li>
+							</ul>
+						</div>
+						<h2>今後の目標</h2>
+						<div class="box">
+							<p>
+								本研究では，マルコフ連鎖の定常分布を学習する方法としてDBLを提案し、DBLがCDLと密接な関係をもつことを示した。
+								今後、DBLの学習速度、収束性の改善を検討する予定である。
+							</p>
+						</div>
+						<!--
+						<div class="box">
+							<h2></h2>
+							<p>
+							</p>
+						</div>
+						<h2></h2>
+						<div class="box">
+							<h3>section1</h3>
+							<p>
+							</p>
+							<h4></h4>
+							<h5></h5>
+							<ul>
+								<li></li>
+								<li></li>
+							</ul>
+							<ol>
+								<li>
+								</li>
+							</ol>
+							<p>
+							</p>
+							<div class="left_image">
+								<img src="images/sample0.jpg" height="100" width="100" alt="sample0" id="sample0" name="sample0" />
+							</div>
+							<div class="right_image">
+								<img src="images/sample1.jpg" height="100" width="125" alt="sample1" id="sample1" name="sample1" />
+							</div>
+							<div class="center_image">
+								<img src="images/sample2.jpg" height="375" width="600" alt="sample2" id="sample2" name="sample2" />
+							</div>
+						</div>
+						-->
+						<div class="link_list_box">
+							<ul class="link_list">
+								<li>
+									<ul class="link_set">
+										<li class="link"><a href="http://www.cs.toronto.edu/~hinton/" target="_blank" >Home Page of Geoffrey Hinton</a></li>
+										<li class="detail">
+											Geoffrey E. Hintonのホームページ
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="inside_list_box">
+							<ul class="link_list">
+								<li>
+									<ul class="link_set">
+										<li class="link"><a href="../index.html" >研究紹介ページへ戻る</a></li>
+										<li class="detail">
+											その他の研究ページも御覧ください。
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="link_set">
+										<li class="link"><a href="../../biography/index.html" target="_blank">お問い合わせ</a></li>
+										<li class="detail">
+											ご不明な点等ございましたらご連絡ください。
+										</li>
+									</ul>
+								</li>
+								<!--
+								<li>
+									<ul class="link_set">
+										<li class="link"><a href="" target="_blank"></a></li>
+										<li class="detail">
+										</li>
+									</ul>
+								</li>
+								-->
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="right_side_column"></div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="outer">
+			<div class="inner">
+				<div class="left_box">
+					<a href="../../index.html">TOP</a>&nbsp;|&nbsp;
+					<a href="../../biography/index.html">BIOGRAPHY</a>&nbsp;|&nbsp;
+					<a href="../../research/index.html">RESEARCH</a>&nbsp;|&nbsp;
+					<a href="../../publication/index.html">PUBLICATION</a>&nbsp;|&nbsp;
+					<a href="../../link/index.html">LINK</a>&nbsp;|&nbsp;
+					<a href="../../biography/index.html#contact">CONTACT</a>
+				</div>
+				<div class="right_box">
+					<address>&copy; 2011, Kyoto University, fyz</address>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

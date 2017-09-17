@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RESEARCH@Shin-ichi MAEDA's Homepage</title>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="index" href="./index.html" />
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link href="../css/import.css" rel="stylesheet" type="text/css" media="screen, tv, projection" />
+</head>
+<body>
+<div id="container">
+	<div id="header">
+		<div class="outer">
+			<div class="inner">
+				<div class="left_box">
+					<div class="logo">
+						<a href="../index.html"><img src="../images/logo.jpg" width="200" height="50" alt="logo" id="logo" name="logo" /></a>
+					</div>
+				</div>
+				<div class="right_box">
+					<div class="menu_box">
+						<ul class="menu">
+							<li><a href="../index.html">TOP</a></li>
+							<li><a href="../biography/index.html">BIOGRAPHY</a></li>
+							<li><a href="../research/index.html">RESEARCH</a></li>
+							<li><a href="../publication/index.html">PUBLICATION</a></li>
+							<li><a href="../link/index.html">LINK</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="contents">
+		<div class="outer">
+			<div class="inner">
+				<div class="left_side_column"></div>
+				<div class="contents_column">
+					<div class="contents_box">
+						<h1>RESEARCH</h1>
+						<h2>Topics</h2>
+						<div class="topic_box">
+							<ul class="topic_list">
+<!--ここからRegularized Learning-->
+								<li>
+									<ul class="topic">
+										<li class="theme">Regularized learning</li>
+										<li class="abstract">
+											<p>
+												Regularization of complex parametric models via virtual adversarila training, which directly penalizes the non-smoothness of the output with respect to the input perturbation. 
+											</p>
+										</li>
+										<li class="link">
+											<ul class="link_list">
+												<li><a href="rl/ja.html">japanese→</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+<!--ここまでRegularized Learning-->
+<!--ここからReinforcement Learning-->
+								<li>
+									<ul class="topic">
+										<li class="theme">Reinforcement Learning</li>
+										<li class="abstract">
+											<p>
+												Efficient exploration considering the uncertainty of the estimates.
+											</p>
+											<p>
+												Versatile AI using a little knowledge of the environment
+												
+											</p>
+										</li>
+										<li class="link">
+											<ul class="link_list">
+												<li><a href="rl/ja.html">japanese→</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+<!--ここまでReinforcement Learning-->
+<!--ここからObject racking-->
+								<li>
+									<ul class="topic">
+										<li class="theme">Video object tracking</li>
+										<li class="abstract">
+											<p>
+												Occlusion-aware video ovject tracking
+											</p>
+											<p>
+												Hyper-parameter learning using dropout
+												
+											</p>
+										</li>
+										<li class="link">
+											<ul class="link_list">
+												<li><a href="rl/ja.html">japanese→</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+<!--ここまでObject racking-->
+<!--ここからImage Superresolution-->
+								<li>
+									<ul class="topic">
+										<li class="theme">Image Superresolution</li>
+										<li class="abstract">
+											<p>
+												Superresolution reconstructs the high-resolution image from a single or multiple low resolution images.
+											</p>
+											<p>
+												There are some demands for CT.
+												
+											</p>
+										</li>
+										<li class="link">
+											<ul class="link_list">
+												<li><a href="superresolution/ja.html">japanese→</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+<!--ここまでImage Super resolution-->
+<!--ここからX-ray Computed Tomography-->
+								<li>
+									<ul class="topic">
+										<li class="theme">X-ray Computed Tomography</li>
+										<li class="abstract">
+											<p>
+												CT reconstructs tomographic images from their projections.
+												Detectors are positioned on the opposite side of the x-ray source, and they rotate around the object.
+											</p>
+											<p>
+												There are some demands for CT.
+												One is reduction of X-ray exposure.
+												X-ray exposure should be minimized in order to avoid an overdose of radiation but limitation of X-ray exposure makes the observed data noisy.
+												Another is reduction of several artifacts such as metal artifacts, motion aratifacts and dark bands artifacts.
+												Presence of high density objects such as metal prostheses and dental fillings cause streak or star artifacts.
+											</p>
+											<p>
+												We utilize Bayesian inference to mitigate these artifacts. Bayesian approach can regularize unwanted solutions by incorporating suitable prior knowledge.
+Also, the estimation is robust to the probabilistic fluctuations by considering the uncertainty regarding the unknown random variables.
+											</p>
+											<p>
+												I'll show you my research on my proposed model with hierarchical proir and the result that shows better performance compared to the existing algorithm.
+											</p>
+										</li>
+										<li class="link">
+											<ul class="link_list">
+												<li><a href="xray/ja.html">japanese→</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+<!--ここまでX-ray Computed Tomography-->
+
+<!--ここからDBL-->
+								<li>
+									<ul class="topic">
+										<li class="theme">Learning and Estimating Discrete Probability Distribution</li>
+										<li class="abstract">
+											<div class="float">
+											<p>
+												In probability theory and statistics, a discrete probability distribution is a probability distribution characterized by a probability mass function (ref: wikipedeia.).
+											</p>
+											<p>
+												I propose a new learning framework named ‘Detailed Balance Learning’ (DBL) to learn a stationary distribution of Markov chain, and show DBL has a close relationship with contrastive divergence learning when applied to restricted Boltzmann machine. A sufficient condition for the convergence is also presented.
+											</p>
+										</li>
+										<li class="link">
+											<ul class="link_list">
+												<li><a href="dbl/ja.html">japanese→</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+<!--ここまでDBL-->
+
+
+<!--テンプレート
+								<li> 
+									<ul class="topic">
+										<li class=“theme”>研究テーマ・タイトル</li> 
+										<li class="abstract“>
+											<p>
+												アブストラクトを記述
+												この中でも
+												<span class="style1"></span>
+												<span class="style2"></span>
+												<br />
+												が使えます。
+											</p> 
+										</li> 
+										<li class="link"> 
+											<ul class="link_list"> 
+												<li>
+													<a href=“リンク先を記述”>リンクタイトル→</a>
+												</li> 
+												<li>
+													<a href=“リンク先を記述”>リンクタイトル→</a>
+												</li> 
+											</ul> 
+										</li>
+									</ul>
+								</li> 
+-->
+							</ul>
+						</div>
+						<h2>Research Interest</h2>
+						<div class="research_box">
+							<h3>Are there any essential barriers that distinguish humans and robots (or computers) ?</h3>
+							<p>
+								I think there are no essential barriers that distingush humans and robots.
+								We will interact with robots as if they were humans as far as we receive similar physical signals from the robots.
+								Brain is not a special matter. It also follows laws of physics.
+								So, it is no wonder the function of the brain could be replaced by some other artificial devices.
+								Why we feel like this is just a wonder, but will be never revealed because we don't have any convincing methodology to prove.
+							</p>
+							<h3>Then, in the future, will it appear the computers those are more intelligent than Einstein or Dirac ?</h3>
+							<p>
+								I think so.
+								I am happy to be born at the time humans operate the computers as masters of them, but not as their followers.
+							</p>
+							<h3>What is lacking for the current computers to be intelligent ?</h3>
+							<p>
+								I think the most important thing is "abstraction".
+								For example, it seems to be impossible to frame a new mathematical theory even computing 1000 years.
+								It needs a sense of beauty for abstraction = simplifying and association(generalization). That is lacking in the current computers (algorithms).
+								I think the language is ultimate abstraction and association tool that helps to "think".
+								Similar abstarction ability may be neccesary for the computers.
+							</p>
+						</div>
+						<h2>My current research</h2>
+						<div class="research_box">
+							<ul class="current_research">
+								<li>Learning prior knowlege from data and inference based on the prior knowledge
+(image and audio signal processing)</li>
+<li>Versatile AI based on a little prior knowlege</li>
+								<li>Efficient exploration based on the uncertainty evaluation</li></ul></div>
+					<!--	<h2>Keywords</h2>
+						<div class="research_box">
+							<ul class="keywords">
+								<li>"autoencoder"</li>
+								<li>"sparse coding"</li>
+								<li>"rate-distortion theory"</li>
+							</ul>
+						</div> -->
+					</div>
+				</div>
+				<div class="right_side_column"></div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<!--<div id="footer_space"><div class="outer"></div></div>-->
+	<div id="footer">
+		<div class="outer">
+			<div class="inner">
+				<div class="left_box">
+					<a href="../index.html">TOP</a>&nbsp;|&nbsp;
+					<a href="../biography/index.html">BIOGRAPHY</a>&nbsp;|&nbsp;
+					<a href="../research/index.html">RESEARCH</a>&nbsp;|&nbsp;
+					<a href="../publication/index.html">PUBLICATION</a>&nbsp;|&nbsp;
+					<a href="../link/index.html">LINK</a>&nbsp;|&nbsp;
+					<a href="../biography/index.html#contact">CONTACT</a>
+				</div>
+				<div class="right_box">
+					<address>&copy; 2011, Kyoto University, fyz</address>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

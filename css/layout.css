@@ -1,0 +1,247 @@
+@charset "utf-8";
+
+/* -----------------------------------------------------------
+CSS Information
+レイアウト
+----------------------------------------------------------- */
+
+/*-----------------------------------------------
+ __contents
+-----------------------------------------------*/
+#container #contents{
+	margin: 0;
+}
+#container #contents .outer{
+	width: 950px;
+	background:#FFF;
+	margin:0 auto;
+	/*background: url("../images/contents_bg.jpg") repeat-y;*/
+}
+#container #contents .outer .inner{
+	width: 950px;
+	margin:0;
+}
+/*-----------------------------------------------
+ __side_bg
+-----------------------------------------------*/
+#container #contents .left_side_column{
+	width:150px;
+	height:500px;
+	float:left;
+	background: url("../images/left_side_column_bg.jpg") no-repeat;
+}
+#container #contents .right_side_column{
+	width:150px;
+	height:500px;
+	float:left;
+	background: url("../images/right_side_column_bg.jpg") repeat-y;
+}
+
+/*-----------------------------------------------
+ __contents_column
+-----------------------------------------------*/
+#container #contents .contents_column{
+	margin-top:25px;
+	width:650px;
+	float:left;
+}
+#container #contents .contents_column .contents_box{
+	
+}
+#container #contents .contents_column .contents_box h1{
+	clear:both;
+	border-left:3px solid #333;
+	padding-left:5px;
+}
+#container #contents .contents_column .contents_box h2{
+	clear:both;
+	margin:1em 0 0 1em;
+	border-left:2px solid #333;
+	border-bottom:1px solid #333;
+	padding-left:5px;
+}
+/*-----------------------------------------------
+ __top
+-----------------------------------------------*/
+#container #contents .contents_column .top_image{
+	margin:0 auto;
+	width:600px;
+	height:450px;
+	background: url("../images/top.jpg") no-repeat;
+}
+/*-----------------------------------------------
+ __biography
+-----------------------------------------------*/
+#container #contents .contents_column .contents_box .portrait_box{
+	width:500px;
+	margin:10px auto;
+}
+#container #contents .contents_column .contents_box .portrait_box .portrait_image{
+	float:left;
+	width:150px;
+	height:120px;
+	background: #F9F9F9;
+	border-bottom:1px solid #CCC;
+}
+#container #contents .contents_column .contents_box .portrait_box .portrait_image img{
+	width:100px;
+	height:100px;
+	margin:10px 25px;
+}
+#container #contents .contents_column .contents_box .portrait_box .portrait_text{
+	float:left;
+	width:350px;
+	height:120px;
+	background: #F9F9F9;
+	border-bottom:1px solid #CCC;
+}
+#container #contents .contents_column .contents_box .portrait_box .portrait_text h3{
+	margin:10px 0;
+}
+#container #contents .contents_column .contents_box .portrait_box .portrait_text p{
+	margin-left:2em;
+}
+
+
+#container #contents .contents_column .contents_box .biography_box{
+	margin:1em 0 0 3em;
+}
+#container #contents .contents_column .contents_box .biography_box ul.biography_contents{
+}
+#container #contents .contents_column .contents_box .biography_box ul.biography_contents ul.contents_set{
+	clear:both;
+}
+#container #contents .contents_column .contents_box .biography_box ul.biography_contents ul.contents_set li.title{
+	clear:both;
+	float:left;
+	width:115px;
+	background: #1C451B;
+	color:#FFF;
+	margin:0 1em 1px 0;
+	padding-left:3px;
+}
+#container #contents .contents_column .contents_box .biography_box ul.biography_contents ul.contents_set li.content{
+	margin:0 0 1px 0;
+}
+
+/*-----------------------------------------------
+ __research
+-----------------------------------------------*/
+#container #contents .contents_column .contents_box .topic_box{
+	margin:1em 0 0 3em;
+}
+#container #contents .contents_column .contents_box .topic_box ul.topic_list{
+	
+}
+#container #contents .contents_column .contents_box .topic_box ul.topic_list li{
+	list-style-type:none;
+	/*list-style-type:square;*/
+}
+#container #contents .contents_column .contents_box .topic_box ul.topic_list li ul.topic{
+	border-bottom:#333 dotted 1px;
+	margin:5px;
+	padding:5px 0;
+}
+#container #contents .contents_column .contents_box .topic_box ul.topic_list li ul.topic li.theme{
+	list-style-type:none;
+	font-size:18px;
+	font-weight:bold;
+}
+#container #contents .contents_column .contents_box .topic_box ul.topic_list li ul.topic li.abstract{
+	list-style-type:none;
+	margin:0 0 0 1em;
+}
+#container #contents .contents_column .contents_box .topic_box ul.topic_list li ul.topic li.abstract p{
+	text-indent:1em;
+}
+#container #contents .contents_column .contents_box .topic_box ul.topic_list li ul.topic li.link{
+	margin:0 0 0 1em;
+	list-style-type:none;
+}
+#container #contents .contents_column .contents_box .topic_box ul.topic_list li ul.topic li.link ul.link_list{
+	
+}
+#container #contents .contents_column .contents_box .topic_box ul.topic_list li ul.topic li.link ul.link_list li{
+	list-style-type:none;
+	text-align:right;
+}
+#container #contents .contents_column .contents_box .topic_box ul.topic_list li ul.topic li.link ul.link_list li a{
+	font-weight:bold;
+}
+#container #contents .contents_column .contents_box .research_box{
+	margin:1em 0 0 3em;
+}
+#container #contents .contents_column .contents_box .research_box h3{
+	
+}
+#container #contents .contents_column .contents_box .research_box p{
+	margin-left:1em;
+}
+#container #contents .contents_column .contents_box .research_box ul.current_research{
+	list-style-type:disc;
+	margin-left:1em;
+}
+#container #contents .contents_column .contents_box .research_box ul.current_research li{
+	
+}
+#container #contents .contents_column .contents_box .research_box ul.keywords{
+	list-style-type:disc;
+	margin-left:1em;
+}
+#container #contents .contents_column .contents_box .research_box ul.keywords li{
+	
+}
+
+/*-----------------------------------------------
+ __publication
+-----------------------------------------------*/
+#container #contents .contents_column .contents_box .publication_box{
+	margin:1em 0 0 3em;
+}
+#container #contents .contents_column .contents_box .publication_box ul.publication_contents{
+}
+#container #contents .contents_column .contents_box .publication_box ul.publication_contents li{
+	list-style-type:decimal;
+}
+#container #contents .contents_column .contents_box .publication_box ul.publication_contents li ul.contents_set{
+	border-bottom:1px #333 solid;
+	margin-bottom:1em;
+}
+#container #contents .contents_column .contents_box .publication_box ul.publication_contents li ul.contents_set li.title{
+	list-style-type:none;
+	font-weight:bold;
+}
+#container #contents .contents_column .contents_box .publication_box ul.publication_contents li ul.contents_set li.author{
+	list-style-type:none;
+	margin-left:1em;
+	font-style: italic;
+}
+#container #contents .contents_column .contents_box .publication_box ul.publication_contents li ul.contents_set li.data{
+	list-style-type:none;
+	margin-left:2em;
+}
+
+/*-----------------------------------------------
+ __link
+-----------------------------------------------*/
+#container #contents .contents_column .contents_box .link_box{
+	margin:1em 0 0 3em;
+}
+#container #contents .contents_column .contents_box .link_box ul.link_contents{
+	
+}
+#container #contents .contents_column .contents_box .link_box ul.link_contents ul.contents_set{
+	
+}
+#container #contents .contents_column .contents_box .link_box ul.link_contents ul.contents_set li{
+	
+}
+#container #contents .contents_column .contents_box .link_box ul.link_contents ul.contents_set li.en{
+	clear:both;
+	float:left;
+	border-right:1px #333 solid;
+	margin-right:25px;
+	width:275px;
+}
+#container #contents .contents_column .contents_box .link_box ul.link_contents ul.contents_set li.ja{
+}

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>X線CT@Shin-ichi MAEDA's Homepage</title>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="index" href="./index.html" />
+<link rel="shortcut icon" href="../../images/favicon.ico" />
+<link href="../../css/import.css" rel="stylesheet" type="text/css" media="screen, tv, projection" />
+</head>
+<body>
+<div id="container">
+	<div id="header">
+		<div class="outer">
+			<div class="inner">
+				<div class="left_box">
+					<div class="logo">
+						<a href="../../index.html"><img src="../../images/logo.jpg" width="200" height="50" alt="logo" id="logo" name="logo" /></a>
+					</div>
+				</div>
+				<div class="right_box">
+					<div class="menu_box">
+						<ul class="menu">
+							<li><a href="../../index.html">TOP</a></li>
+							<li><a href="../../biography/index.html">BIOGRAPHY</a></li>
+							<li><a href="../../research/index.html">RESEARCH</a></li>
+							<li><a href="../../publication/index.html">PUBLICATION</a></li>
+							<li><a href="../../link/index.html">LINK</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="contents">
+		<div class="outer">
+			<div class="inner">
+				<div class="left_side_column"></div>
+				<div class="contents_column">
+					<div class="contents_box">
+						<h1>X線CT</h1>
+						<h2>X線CT装置による撮像</h2>
+						<div class="box">
+							<div class="center_image">
+								<img src="images/proposedModel.jpg" width="519" height="193" alt="image" id="image" name="image" />
+							</div>
+							<p>
+								<span class="style1">X線CT</span>とは、撮像対象に対して色んな方向からX線を照射し、その投影像(X線の吸収像)を得ることで画像を再構成する技術である。
+								<span class="style2">なぜ、今X線CTなのか。</span>
+								このページではX線CTの精度を改善する意義と研究内容について述べる。
+							</p>
+							<p>
+								まずは<span class="style1">X線CTの市場性</span>について説明する。
+								次に<span class="style1">X線CTによるガンリスク</span>について述べ、従<span class="style1">来手法で改善しきれない問題点</span>を挙げる。
+								そして、<span class="style1">計算機技術の発達による実用性向上</span>についてと<span class="style1">今後の発展性</span>について説明する。
+							</p>
+							<h3>市場性</h3>
+							<p>
+								2007年の医用X線CT装置の日本の市場規模は147,979(百万円) (生産量：122,753百万円、輸入量：22,226百万円)(厚生労働省の薬事工業生産動態統計)
+								2007年の米国のCT装置の市場規模推定23億ドル、<span class="style1">2012年に推定32億ドルと今後も市場拡大が期待されている</span>(NEDO海外リポート)。
+							</p>
+							<p>
+								診断用メディカルイメージング全般(世界市場)：年間成長率７．８％で堅実に伸びていき、<span class="style1">２０１１年には４００億ドルに達すると予測される。</span>
+								一方出荷台数は年間成長率４．３％で２０１１年には総台数１２万５６００台になろうとしている(富士経済USA2006(調査会社資料の冒頭言より引用)。
+								しかし、中国、インドなどの大きな需要を擁する市場で、需要が満たされていない。
+							</p>
+							<p>
+								また、非破壊検査にも有用(1990年代から産業用X線CTスキャナの登場)である。
+							</p>
+							<h3>X線CTによるガンリスクの存在</h3>
+							<p>
+								<span class="style1">X線光量は強力であれば、再構成画像のSN比や再構成画像の解像度を高められるが、放射線被曝による健康リスクが増大する。</span>
+								X線被曝の危険性について、現状では急性放射線障害が起きるレベルではないというものの、数か月-数十年スパンの長期リスクは研究中である。
+							</p>
+							<ul>
+								<li>
+									0.8-1.25mSv:<br /> 自然放射線(宇宙線、大地、食物)による年間被曝量(日本)
+								</li>
+								<li>
+									4mSV:<br /> 胃のX線撮影。
+								</li>
+								<li>
+									5mSV:<br /> 放射線業務従事者（妊娠可能な女子に限る）が法定の三カ月間にさらされてよい放射線の限度。
+								</li>
+								<li>
+									7～20mSV:<br /> X線CTによる撮像。
+								</li>
+								<li>
+									50mSV:<br /> 放射線業務従事者（妊娠可能な女子を除く）が一年間にさらされてよい放射線の限度。
+								</li>
+								<li>
+									100mSV:<br /> 放射線業務従事者（妊娠可能な女子を除く）が法定の五年間にさらされてよい放射線の限度。放射線業務従事者（妊娠可能な女子を除く）が一回の緊急作業でさらされてよい放射線の限度。妊娠可能な女子は緊急作業が禁止されている。
+								</li>
+							</ul>
+							<h3>従来手法で改善しきれない問題点の存在</h3>
+							<div class="left_image">
+								<img src="images/MetalArtifact.jpg" width="121" height="119" alt="image" id="image" name="image" />
+							</div>
+							<p>
+								<span class="style1">逆にX線の光量が少ない場合、ショットノイズの影響増大・メタルアーティファクトが発生(対象にメタルを含むとき)する。</span>
+								先に述べたように、X線光量は強力であれば再構成画像のSN比を高められるor再構成画像の解像度を高められるが、放射線被曝による健康リスクが増大する。
+								解像度向上/SN比向上は、画像診断にとって重要診断には知識と経験が必要とされている。
+								日本は放射線医不足コンピュータによる画像診断技術の研究が活発電子情報通信学会医用画像研究会では2009年度にCTに関する研究が70件(病変部位の抽出、臓器、血管の分類・抽出や、それに基づく人体モデルの同定など)提出されている。
+							</p>
+							<h3>計算機技術の発達による実用性向上</h3>
+							<p>
+								クラウド技術の発達により、カーナビ、ゲーム、携帯音楽プレイヤーなど解析装置(ソフトウェア)と観測装置(ハードウェア)の分離が可能になった。
+								X線CTは観測装置が高価(数千万円)観測装置はそのままに解析機能の向上が図れる解析装置(計算機)のメンテナンス不要通信に必要なデータ量は、高々512x512の画像であり、3次元の場合はそれらが100枚必要となる。
+							</p>
+							<p>
+								従来であればこのデータ量の処理に膨大な時間が必要であったが、GPGPU(General-Purpose computing on Graphic　Processing　Units)による並列計算技術の発達並列計算が容易にできるようになったことで、100倍程度の高速化が可能となった。
+								また、高速通信インフラの整備光ファイバー網の整備、第4世代無線通信の確立により、計算機間の通信処理速度も向上した。
+							</p>
+							<h3>発展性について</h3>
+							<p>
+								CTは動かない対象に対して得られた投影像から再構成することが前提である。
+								しかし、<span class="style2">心臓や肺のCT,幼児に対するCTに対して、モーションアーティファクトが発生してしまう。</span>
+								心臓は、心電図との同期が用いられるが動きの早い部位では不完全となるが、1周0.3秒程度の時間なので、短時間ごとに等速直線運動を仮定したモデル構築可能本発明の技術を利用することで推定精度向上が見込める。
+								3Dやそれを時系列に並べて得られる動画CTでの被曝量低減(投影数削減)3Dや動画を得るためには、その分の多数のX線投射が必要となるが、本発明によってその<span class="style2">投影数を減らす</span>ことが可能となる。
+							</p>
+						</div>
+						
+						<h2>体内組織構成を考慮したX線CTアルゴリズム</h2>
+						<div class="box">
+							<p>
+								<span class="style1">X線CTの高精度化を可能にするアルゴリズムを発明することで、より低いX線被曝量で従来と同程度のCT画像再構成を行う。</span>
+							</p>
+							<ul>
+								<li>
+									統計的推論の枠組みで定式化、計算を行っているため、コスト関数の性質が良い(一貫性をもち、収束が保証される)。
+								</li>
+								<li>
+									統計的推論の枠組みで定式化することで、人体に関する知識を自然な形で推論に利用でき、不良設定性を解消できる
+								</li>
+								<li>
+									統計的推論の枠組みに則った上で現実的な時間で計算可能なアルゴリズムが導出できる。
+								</li>
+							</ul>
+							<h3>発明の概要</h3>
+							<div class="right_image">
+								<img src="images/prior.jpg" width="316" height="244" alt="image" id="image" name="image" />
+							</div>
+							<p>
+								<span class="style1">フォトンノイズなどによる観測の不確定性や、人体の組織分布に関する事前知識を確率分布の形で表現し、統計的推論を用いて断面像、再構成を行う。</span>
+							</p>
+							<ul>
+								<li>どのような組織(通常細胞（筋肉）、軟細胞（脂肪)、骨、メタルなど)がどの程度の割合で分布するか</li>
+								<li>それぞれの組織がどの程度のX線吸収係数をもつか</li>
+								<li>それぞれの組織がどの程度、空間的に連続して分布しやすいか</li>
+							</ul>
+							<h3>結果</h3>
+							<div class="center_image">
+								<img src="images/result.jpg" width="349" height="476" alt="image" id="image" name="image" />
+							</div>
+							<h3>今後の計画</h3>
+							<p>
+								現場(お医者さん)の意見を聞くことで、ニーズを知り、ソフトウェアのチューニングを図る(実際のCT装置や人体に合わせた設計)
+							</p>
+						</div>
+						<!--
+						<h2></h2>
+						<div class="box">
+							<h3>section1</h3>
+							<p>
+							</p>
+							<h4></h4>
+							<h5></h5>
+							<ul>
+								<li></li>
+								<li></li>
+							</ul>
+							<ol>
+								<li>
+								</li>
+							</ol>
+							<p>
+							</p>
+							<div class="left_image">
+								<img src="images/sample0.jpg" height="100" width="100" alt="sample0" id="sample0" name="sample0" />
+							</div>
+							<div class="right_image">
+								<img src="images/sample1.jpg" height="100" width="125" alt="sample1" id="sample1" name="sample1" />
+							</div>
+							<div class="center_image">
+								<img src="images/sample2.jpg" height="375" width="600" alt="sample2" id="sample2" name="sample2" />
+							</div>
+						</div>
+						-->
+						<div class="link_list_box">
+							<ul class="link_list">
+								<li>
+									<ul class="link_set">
+										<li class="link"><a href="http://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E6%96%AD%E5%B1%A4%E6%92%AE%E5%BD%B1">wikipedia</a></li>
+										<li class="detail">
+											コンピュータ断層撮影
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="inside_list_box">
+							<ul class="link_list">
+								<li>
+									<ul class="link_set">
+										<li class="link"><a href="../index.html" >研究紹介ページへ戻る</a></li>
+										<li class="detail">
+											その他の研究ページも御覧ください。
+										</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="link_set">
+										<li class="link"><a href="../../biography/index.html" target="_blank">お問い合わせ</a></li>
+										<li class="detail">
+											ご不明な点等ございましたらご連絡ください。
+										</li>
+									</ul>
+								</li>
+								<!--
+								<li>
+									<ul class="link_set">
+										<li class="link"><a href="" target="_blank"></a></li>
+										<li class="detail">
+										</li>
+									</ul>
+								</li>
+								-->
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="right_side_column"></div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="outer">
+			<div class="inner">
+				<div class="left_box">
+					<a href="../../index.html">TOP</a>&nbsp;|&nbsp;
+					<a href="../../biography/index.html">BIOGRAPHY</a>&nbsp;|&nbsp;
+					<a href="../../research/index.html">RESEARCH</a>&nbsp;|&nbsp;
+					<a href="../../publication/index.html">PUBLICATION</a>&nbsp;|&nbsp;
+					<a href="../../link/index.html">LINK</a>&nbsp;|&nbsp;
+					<a href="../../biography/index.html#contact">CONTACT</a>
+				</div>
+				<div class="right_box">
+					<address>&copy; 2011, Kyoto University, fyz</address>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
